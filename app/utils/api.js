@@ -37,7 +37,7 @@ function getUserData (player) {
   // axios.all waits for all async functions to resolve before moving forward
   return axios.all([
     getProfile(player),
-    getRepos(players),
+    getRepos(player),
   ]).then(function (data){
     var profile = data[0];
     var repos = data[1];
